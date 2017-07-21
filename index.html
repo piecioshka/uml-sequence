@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>uml-sequence</title>
+
+    <link href="bower_components/js-sequence-diagrams/dist/sequence-diagram-min.css" rel="stylesheet" />
+    <style>
+        *, *:before, *:after {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0 50px;
+            height: 100%;
+        }
+
+        #page {
+            display: flex;
+            justify-content: space-between;
+            height: inherit;
+        }
+
+        h1 {
+            border-bottom: 1px solid;
+            margin: 20px 0 70px 0;
+        }
+
+        #editor {
+            width: 40%;
+            font-size: 16px;
+            padding: 5px;
+            font-family: monospace;
+        }
+
+        #diagram {
+            min-width: 50%;
+            text-align: center;
+        }
+
+        .actor text:hover,
+        .title text:hover,
+        .signal text:hover {
+            fill: #aaaaaa
+        }
+    </style>
+</head>
+<body>
+    <h1>UML Sequence - diagram editor</h1>
+
+    <div id="page">
+        <textarea id="editor" title="Code which generate diagram UML">
+            A->B: Does something
+        </textarea>
+
+        <div id="diagram"></div>
+    </div>
+
+    <a href="https://github.com/piecioshka/uml-sequence"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png"></a>
+
+    <script src="bower_components/bower-webfontloader/webfont.js"></script>
+    <script src="bower_components/snap.svg/dist/snap.svg-min.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <script src="bower_components/js-sequence-diagrams/dist/sequence-diagram-min.js"></script>
+    <script>
+        const options = { theme: 'simple' };
+        let $textarea = document.querySelector('#editor');
+
+        function render() {
+            let code = $textarea.value;
+            try {
+                let d = window.Diagram.parse(code);
+                clearLatestDiagram();
+                d.drawSVG('diagram', options);
+            } catch (err) {
+                console.log(err);
+            }
+        }
+
+        function rewriteCode() {
+            $textarea.value = $textarea.value.trim();
+        }
+
+        function clearLatestDiagram() {
+            document.querySelector('#diagram').innerText = '';
+        }
+
+        function setup() {
+            rewriteCode();
+            render();
+            $textarea.focus();
+        }
+
+        $textarea.addEventListener('keypress', render);
+        $textarea.addEventListener('blur', render);
+        window.addEventListener('load', setup);
+    </script>
+</body>
+</html>

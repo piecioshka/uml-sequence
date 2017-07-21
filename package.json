@@ -1,8 +1,8 @@
 {
     "private": true,
     "name": "uml-sequence",
-    "description": "TODO",
-    "version": "0.0.0",
+    "description": "Make UML Sequence diagram by write plain text formula",
+    "version": "1.0.0",
     "license": "MIT",
     "author": {
         "name": "Piotr Kowalski",
@@ -12,21 +12,12 @@
     "scripts": {
         "clear": "",
         "clear:all": "rm -rf node_modules/ && npm run clear",
-        "test": "npm run test:unit",
-        "test:unit": "jasmine JASMINE_CONFIG_PATH=test/unit/jasmine.json",
-        "coverage": "istanbul cover jasmine JASMINE_CONFIG_PATH=test/unit/jasmine.json",
-        "count": "find . -name '*.js' -not -path './node_modules/*' | xargs wc -l | sort -r",
-        "lint": "eslint ./ ; exit 0"
+        "count": "find . -name '*.js' -not -path './node_modules/*' | xargs wc -l | sort -r"
     },
     "dependencies": {},
-    "devDependencies": {
-        "eslint": "^3.16.1",
-        "eslint-config-piecioshka": "^1.1.8",
-        "istanbul": "^0.4.5",
-        "jasmine": "^2.5.3"
-    },
+    "devDependencies": {},
     "repository": {
         "type": "git",
-        "url": ""
+        "url": "https://github.com/piecioshka/uml-sequence.git"
     }
 }

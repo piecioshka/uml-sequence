@@ -1,22 +1,10 @@
 # uml-sequence
 
-> TODO
+> Make UML Sequence diagram by write plain text formula
 
-## Unit tests
+## Demo
 
-Use Jasmine to setup unit test:
-
-```
-$ npm test
-```
-
-## Code coverage
-
-Use Istanbul to get code coverage ratio:
-
-```
-$ npm run coverage
-```
+[https://piecioshka.pl/uml-sequence](https://piecioshka.pl/uml-sequence)
 
 ## License
 
