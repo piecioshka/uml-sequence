@@ -4,7 +4,7 @@
 
 ## Demo
 
-Click: [https://piecioshka.pl/uml-sequence](https://piecioshka.pl/uml-sequence)
+Click: [https://piecioshka.pl/labs/uml-sequence](https://piecioshka.pl/labs/uml-sequence)
 
 ## License
 
