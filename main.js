@@ -6,7 +6,7 @@ let $diagram = document.querySelector('.diagram');
 let $errMessage = document.querySelector('.error-message');
 
 function render() {
-    let code = $editor.textContent;
+    let code = $editor.innerText;
 
     clearErrorMessage();
 
@@ -20,21 +20,21 @@ function render() {
 }
 
 function clearLatestDiagram() {
-    $diagram.textContent = '';
+    $diagram.innerText = '';
 }
 
 function reportError(err) {
     console.error(err);
-    $errMessage.textContent = err.message;
+    $errMessage.innerText = err.message;
 }
 
 function clearErrorMessage() {
-    $errMessage.textContent = '';
+    $errMessage.innerText = '';
 }
 
 function setup() {
     render();
-    $editor.textContent = removeInitialIndentation($editor.textContent);
+    $editor.innerText = removeInitialIndentation($editor.innerText);
     $editor.focus();
 }
 
