@@ -5,6 +5,22 @@ let $editor = document.querySelector('.editor');
 let $diagram = document.querySelector('.diagram');
 let $errMessage = document.querySelector('.error-message');
 
+// https://davidwalsh.name/function-debounce
+function debounce(func, wait, immediate) {
+    let timeout;
+    return function () {
+        const context = this, args = arguments;
+        const later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+}
+
 function render() {
     let code = $editor.innerText;
 
@@ -42,6 +58,6 @@ function removeInitialIndentation(text) {
     return text.replace(/^ +/gm, '');
 }
 
-$editor.addEventListener('keyup', render);
+$editor.addEventListener('keyup', debounce(render, 200));
 $editor.addEventListener('blur', render);
 window.addEventListener('load', setup);

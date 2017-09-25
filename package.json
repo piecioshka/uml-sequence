@@ -2,7 +2,7 @@
     "private": true,
     "name": "uml-sequence",
     "description": "Make UML Sequence diagram by write plain text formula",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "license": "MIT",
     "author": {
         "name": "Piotr Kowalski",
