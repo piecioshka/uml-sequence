@@ -1,19 +1,11 @@
 {
+    "private": true,
     "name": "uml-sequence",
     "description": "Make UML Sequence diagram by write plain text formula",
-    "main": "",
     "authors": [
         "Piotr Kowalski <piecioshka@gmail.com> (https://piecioshka.pl)"
     ],
     "license": "MIT",
-    "homepage": "https://github.com/piecioshka/uml-sequence",
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "tests"
-    ],
     "dependencies": {
         "js-sequence-diagrams": "bramp/js-sequence-diagrams#^2.0.1"
     }

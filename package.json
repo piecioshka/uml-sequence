@@ -10,10 +10,9 @@
         "url": "https://piecioshka.pl/"
     },
     "scripts": {
-        "clear": "rm -rf bower_components/",
-        "clear:all": "rm -rf node_modules/ && npm run clear",
+        "clear:all": "rm -rf node_modules/ npm-debug.log app/bower_components/",
         "count": "find . -name '*.js' -not -path './node_modules/*' | xargs wc -l | sort -r",
-        "deploy": "gh-pages -d ./"
+        "deploy": "gh-pages -d app/"
     },
     "dependencies": {},
     "devDependencies": {
