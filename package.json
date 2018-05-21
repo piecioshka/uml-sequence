@@ -10,7 +10,7 @@
         "url": "https://piecioshka.pl/"
     },
     "scripts": {
-        "clear": "",
+        "clear": "rm -rf bower_components/",
         "clear:all": "rm -rf node_modules/ && npm run clear",
         "count": "find . -name '*.js' -not -path './node_modules/*' | xargs wc -l | sort -r",
         "deploy": "gh-pages -d ./"
