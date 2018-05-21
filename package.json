@@ -12,10 +12,13 @@
     "scripts": {
         "clear": "",
         "clear:all": "rm -rf node_modules/ && npm run clear",
-        "count": "find . -name '*.js' -not -path './node_modules/*' | xargs wc -l | sort -r"
+        "count": "find . -name '*.js' -not -path './node_modules/*' | xargs wc -l | sort -r",
+        "deploy": "gh-pages -d ./"
     },
     "dependencies": {},
-    "devDependencies": {},
+    "devDependencies": {
+        "gh-pages": "^1.1.0"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/piecioshka/uml-sequence.git"
