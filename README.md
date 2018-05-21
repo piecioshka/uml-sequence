@@ -4,7 +4,7 @@
 
 ## Demo
 
-Click: [https://piecioshka.pl/labs/uml-sequence](https://piecioshka.pl/labs/uml-sequence)
+Click: [https://piecioshka.github.io/uml-sequence/](https://piecioshka.github.io/uml-sequence/)
 
 ## Syntax
 
