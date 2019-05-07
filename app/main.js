@@ -1,9 +1,9 @@
 'use strict';
 
 const options = { theme: 'simple' };
-let $editor = document.querySelector('.editor');
-let $diagram = document.querySelector('.diagram');
-let $errMessage = document.querySelector('.error-message');
+const $editor = document.querySelector('.editor');
+const $diagram = document.querySelector('.diagram');
+const $errMessage = document.querySelector('.error-message');
 
 // https://davidwalsh.name/function-debounce
 function debounce(func, wait, immediate) {
@@ -22,7 +22,7 @@ function debounce(func, wait, immediate) {
 }
 
 function render() {
-    let code = $editor.innerText;
+    const code = $editor.textContent;
 
     clearErrorMessage();
 
@@ -36,21 +36,21 @@ function render() {
 }
 
 function clearLatestDiagram() {
-    $diagram.innerText = '';
+    $diagram.textContent = '';
 }
 
 function reportError(err) {
     console.error(err);
-    $errMessage.innerText = err.message;
+    $errMessage.textContent = err.message;
 }
 
 function clearErrorMessage() {
-    $errMessage.innerText = '';
+    $errMessage.textContent = '';
 }
 
 function setup() {
     render();
-    $editor.innerText = removeInitialIndentation($editor.innerText);
+    $editor.textContent = removeInitialIndentation($editor.textContent);
     $editor.focus();
 }
 

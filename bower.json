@@ -1,7 +1,7 @@
 {
     "private": true,
     "name": "uml-sequence",
-    "description": "Make UML Sequence diagram by write plain text formula",
+    "description": "Make UML Sequence diagram by writing plain text formula",
     "authors": [
         "Piotr Kowalski <piecioshka@gmail.com> (https://piecioshka.pl)"
     ],

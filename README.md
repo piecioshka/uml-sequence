@@ -1,17 +1,10 @@
 # uml-sequence
 
-> Make UML Sequence diagram by write plain text formula
+:hammer: Make UML Sequence diagram by writing plain text formula
 
-## Install
+## Demo 🎊
 
-```
-bower install
-npm install
-```
-
-## Demo
-
-Click: [https://piecioshka.github.io/uml-sequence/](https://piecioshka.github.io/uml-sequence/)
+<https://piecioshka.github.io/uml-sequence/>
 
 ## Syntax
 
